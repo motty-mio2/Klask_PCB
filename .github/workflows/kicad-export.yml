@@ -28,6 +28,7 @@ jobs:
           run_drc: false
           pcb_output_gerbers_and_drill: true
           pcb_output_image: true
+          pcb_output_image_side: both
 
       - name: Upload schematic
         uses: actions/upload-artifact@v7
@@ -41,8 +42,8 @@ jobs:
           name: Gerbers
           path: ./gerbers
 
-      - name: Upload image render
+      - name: Upload image renders
         uses: actions/upload-artifact@v7
         with:
-          path: ./pcb.png
-          archive: false
+          name: PCB-Images
+          path: ./pcb*.png
