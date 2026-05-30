@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Export PDFs using KiCad Action
-        uses: actions-for-kicad/kicad-actions@v2-k9.0
+        uses: actions-for-kicad/kicad-actions@v2.2-k10.0
         with:
           entrypoint: /bin/bash
           args: -c "kicad-cli pcb export pdf -l F.Cu,F.Silkscreen,Edge.Cuts Klask_PCB.kicad_pcb -o PCB_F.pdf && kicad-cli pcb export pdf -l B.Cu,B.Silkscreen,Edge.Cuts Klask_PCB.kicad_pcb -o PCB_B.pdf && kicad-cli sch export pdf -o SCH.pdf Klask_PCB.kicad_sch"
