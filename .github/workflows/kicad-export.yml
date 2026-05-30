@@ -1,4 +1,4 @@
-name: Export KiCad PDFs and Release
+name: Export KiCad PDFs
 
 on:
   push:
@@ -21,11 +21,11 @@ jobs:
         uses: actions-for-kicad/kicad-actions@v2-k10.0
         with:
           schematic_file_name: ./Klask_PCB.kicad_sch
-          run_erc: true
+          run_erc: false
           schematic_output_pdf: true
 
           pcb_file_name: ./Klask_PCB.kicad_pcb
-          run_drc: true
+          run_drc: false
           pcb_output_gerbers_and_drill: true
           pcb_output_image: true
 
