@@ -1,0 +1,49 @@
+name: Export KiCad PDFs and Release
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  export-pdfs:
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:9.0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Export Front PCB PDF
+        run: kicad-cli pcb export pdf -l F.Cu,F.Silkscreen,Edge.Cuts Klask_PCB.kicad_pcb -o PCB_F.pdf
+
+      - name: Export Back PCB PDF
+        run: kicad-cli pcb export pdf -l B.Cu,B.Silkscreen,Edge.Cuts Klask_PCB.kicad_pcb -o PCB_B.pdf
+
+      - name: Export Schematic PDF
+        run: kicad-cli sch export pdf -o SCH.pdf Klask_PCB.kicad_sch
+
+      - name: Upload PDF Artifacts (Actions)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-outputs
+          path: |
+            PCB_F.pdf
+            PCB_B.pdf
+            SCH.pdf
+
+      - name: Create Release and Upload Assets
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            PCB_F.pdf
+            PCB_B.pdf
+            SCH.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
