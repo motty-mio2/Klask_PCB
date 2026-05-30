@@ -14,13 +14,30 @@ pcb_b:
 
 pcb: pcb_f pcb_b
 
-export: sch pcb
+gerbers:
+  mkdir -p {{output_dir}}/gerbers
+  kicad-cli pcb export gerbers Klask_PCB.kicad_pcb -o {{output_dir}}/gerbers
+  kicad-cli pcb export drill Klask_PCB.kicad_pcb -o {{output_dir}}/gerbers
+
+image_front:
+  mkdir -p {{output_dir}}
+  kicad-cli pcb render Klask_PCB.kicad_pcb -o {{output_dir}}/pcb_front.png --side front
+
+image_back:
+  mkdir -p {{output_dir}}
+  kicad-cli pcb render Klask_PCB.kicad_pcb -o {{output_dir}}/pcb_back.png --side back
+
+image: image_front image_back
+
+export: sch pcb gerbers image
 
 erc:
-    kicad-cli sch erc Klask_PCB.kicad_sch --exit-code-violations -o {{output_dir}}/erc.rpt
+  mkdir -p {{output_dir}}
+  kicad-cli sch erc Klask_PCB.kicad_sch --exit-code-violations -o {{output_dir}}/erc.rpt
 
 drc:
-    kicad-cli pcb drc ./Klask_PCB.kicad_pcb --exit-code-violations -o {{output_dir}}/drc.rpt
+  mkdir -p {{output_dir}}
+  kicad-cli pcb drc ./Klask_PCB.kicad_pcb --exit-code-violations -o {{output_dir}}/drc.rpt
 
 check: erc drc
 

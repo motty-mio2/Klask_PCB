@@ -11,15 +11,14 @@ on:
 jobs:
   erc-check:
     runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Run ERC
-        uses: actions-for-kicad/kicad-actions@v2-k10.0
-        with:
-          schematic_file_name: ./Klask_PCB.kicad_sch
-          run_erc: true
+      - name: Setup just
+        uses: extractions/setup-just@v2
 
-          pcb_file_name: ./Klask_PCB.kicad_pcb
-          run_drc: true
+      - name: Run ERC and DRC
+        run: just check
