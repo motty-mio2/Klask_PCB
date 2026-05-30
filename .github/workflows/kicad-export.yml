@@ -5,7 +5,7 @@ on:
     branches:
       - main
     tags:
-      - 'v*'
+      - "v*"
 
 permissions:
   contents: write
@@ -17,28 +17,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Export PDFs using KiCad Action
-        uses: actions-for-kicad/kicad-actions@v2.2-k10.0
+      - name: Run KiCad actions
+        uses: actions-for-kicad/kicad-actions@v2-k10.0
         with:
-          entrypoint: /bin/bash
-          args: -c "kicad-cli pcb export pdf -l F.Cu,F.Silkscreen,Edge.Cuts Klask_PCB.kicad_pcb -o PCB_F.pdf && kicad-cli pcb export pdf -l B.Cu,B.Silkscreen,Edge.Cuts Klask_PCB.kicad_pcb -o PCB_B.pdf && kicad-cli sch export pdf -o SCH.pdf Klask_PCB.kicad_sch"
+          schematic_file_name: ./Klask_PCB.kicad_sch
+          run_erc: true
+          schematic_output_pdf: true
 
-      - name: Upload PDF Artifacts (Actions)
-        uses: actions/upload-artifact@v4
-        with:
-          name: pdf-outputs
-          path: |
-            PCB_F.pdf
-            PCB_B.pdf
-            SCH.pdf
+          pcb_file_name: ./Klask_PCB.kicad_pcb
+          run_drc: true
+          pcb_output_gerbers_and_drill: true
+          pcb_output_image: true
 
-      - name: Create Release and Upload Assets
-        if: startsWith(github.ref, 'refs/tags/v')
-        uses: softprops/action-gh-release@v2
+      - name: Upload schematic
+        uses: actions/upload-artifact@v7
         with:
-          files: |
-            PCB_F.pdf
-            PCB_B.pdf
-            SCH.pdf
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: ./schematic.pdf
+          archive: false
+
+      - name: Upload gerbers and drill file
+        uses: actions/upload-artifact@v7
+        with:
+          name: Gerbers
+          path: ./gerbers
+
+      - name: Upload image render
+        uses: actions/upload-artifact@v7
+        with:
+          path: ./pcb.png
+          archive: false
