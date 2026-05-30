@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
-      - name: Run KiCad actions
+      - name: Export schematic, gerbers, and front image
         uses: actions-for-kicad/kicad-actions@v2-k10.0
         with:
           schematic_file_name: ./Klask_PCB.kicad_sch
@@ -28,7 +28,17 @@ jobs:
           run_drc: false
           pcb_output_gerbers_and_drill: true
           pcb_output_image: true
-          pcb_output_image_side: both
+          pcb_output_image_side: front
+          pcb_output_image_file_name: pcb_front.png
+
+      - name: Export back image
+        uses: actions-for-kicad/kicad-actions@v2-k10.0
+        with:
+          pcb_file_name: ./Klask_PCB.kicad_pcb
+          run_drc: false
+          pcb_output_image: true
+          pcb_output_image_side: back
+          pcb_output_image_file_name: pcb_back.png
 
       - name: Upload schematic
         uses: actions/upload-artifact@v7
