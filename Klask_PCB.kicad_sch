@@ -2244,6 +2244,12 @@
 		(uuid "70d21ec9-fd27-43e9-bf48-0a4a22165092")
 	)
 	(junction
+		(at 233.68 54.61)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5cfbe21-1d2e-4b18-be90-438b11cb42c1")
+	)
+	(junction
 		(at 176.53 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2453,6 +2459,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 54.61) (xy 236.22 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f33737b-9087-4869-9a7d-0acde3e31cfd")
+	)
+	(wire
+		(pts
 			(xy 162.56 129.54) (xy 163.83 129.54)
 		)
 		(stroke
@@ -2633,6 +2649,16 @@
 	)
 	(wire
 		(pts
+			(xy 233.68 54.61) (xy 233.68 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82762e1b-62eb-4f37-8c14-1f5a608ad5d7")
+	)
+	(wire
+		(pts
 			(xy 58.42 177.8) (xy 60.96 177.8)
 		)
 		(stroke
@@ -2680,16 +2706,6 @@
 			(type default)
 		)
 		(uuid "924313ab-c9db-45eb-bca3-a6d405f64c24")
-	)
-	(wire
-		(pts
-			(xy 243.84 52.07) (xy 248.92 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "94abaccc-6d41-482b-8ac2-308b690ba040")
 	)
 	(wire
 		(pts
@@ -2780,16 +2796,6 @@
 			(type default)
 		)
 		(uuid "b7ff61da-ff27-4d46-81fd-218043df67dd")
-	)
-	(wire
-		(pts
-			(xy 248.92 52.07) (xy 248.92 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b9cfcb23-0e7e-4688-b24f-13541817220b")
 	)
 	(wire
 		(pts
@@ -3023,7 +3029,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 52.07) (xy 233.68 64.77)
+			(xy 233.68 52.07) (xy 233.68 54.61)
 		)
 		(stroke
 			(width 0)
@@ -3150,6 +3156,16 @@
 			(justify right bottom)
 		)
 		(uuid "1cab710e-d431-4b1b-b077-dccc78f42aa3")
+	)
+	(label "SW_Y"
+		(at 97.79 96.52 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "20e99b61-b1a3-43fa-9142-326293f210ad")
 	)
 	(label "MX_A2"
 		(at 180.34 55.88 0)
@@ -3451,16 +3467,6 @@
 		)
 		(uuid "ba99779a-c8db-4a63-87e4-63470b890baa")
 	)
-	(label "SW_X"
-		(at 97.79 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c8b61c9c-b6fc-47a9-b7aa-efe6d03f1345")
-	)
 	(label "MY_B2"
 		(at 116.84 157.48 180)
 		(effects
@@ -3501,16 +3507,6 @@
 		)
 		(uuid "d5b37c6f-ede4-4712-a6fd-392b760e4220")
 	)
-	(label "SW_Y"
-		(at 97.79 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "db12b0c4-ad37-457c-985c-9399e669e60c")
-	)
 	(label "M0"
 		(at 69.85 63.5 180)
 		(effects
@@ -3550,6 +3546,16 @@
 			(justify left bottom)
 		)
 		(uuid "e549e9b2-1187-4474-ba41-81589d23401c")
+	)
+	(label "SW_X"
+		(at 97.79 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "eddf68de-6bfe-4dee-b319-cc6d8ce89c9f")
 	)
 	(label "MY_DIR"
 		(at 69.85 76.2 180)
@@ -3600,6 +3606,73 @@
 			(justify left bottom)
 		)
 		(uuid "f9c76962-365f-4697-a3e1-8149afab5c62")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 236.22 54.61 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0328e2e7-bda7-4afc-bf62-51918adb8bd1")
+		(property "Reference" "#PWR012"
+			(at 242.57 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 240.03 54.6099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 236.22 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2e6ce75-89f4-4454-830c-755c02236cd6")
+		)
+		(instances
+			(project "Klask_PCB"
+				(path "/3be7f516-059a-41e8-b3c3-2dfacc710f71"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:LED")
@@ -3743,74 +3816,6 @@
 			(project "Klask_PCB"
 				(path "/3be7f516-059a-41e8-b3c3-2dfacc710f71"
 					(reference "SW2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 238.76 52.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0ade43cc-cd54-4505-856c-8b7315087d5f")
-		(property "Reference" "SW6"
-			(at 238.76 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SW_Push"
-			(at 238.76 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
-			(at 238.76 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 238.76 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 238.76 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b374f6c7-c3e4-4125-9d04-57dd98516dd5")
-		)
-		(pin "2"
-			(uuid "6725d140-9575-4e1f-8954-f5503294ee9b")
-		)
-		(instances
-			(project "Klask_PCB"
-				(path "/3be7f516-059a-41e8-b3c3-2dfacc710f71"
-					(reference "SW6")
 					(unit 1)
 				)
 			)
@@ -4246,7 +4251,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 248.92 46.99 0)
+		(at 233.68 54.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4255,7 +4260,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b824873-f38d-4733-bb9e-b31e440bedb9")
 		(property "Reference" "#PWR01"
-			(at 248.92 50.8 0)
+			(at 237.49 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4264,7 +4269,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 248.92 41.91 0)
+			(at 232.41 52.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4272,7 +4277,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 248.92 46.99 0)
+			(at 233.68 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4281,7 +4286,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 248.92 46.99 0)
+			(at 233.68 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4290,7 +4295,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 248.92 46.99 0)
+			(at 233.68 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4910,6 +4915,76 @@
 			(project "Klask_PCB"
 				(path "/3be7f516-059a-41e8-b3c3-2dfacc710f71"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 233.68 46.99 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "806a5fee-d9cb-4e1c-aff2-93f60888caae")
+		(property "Reference" "J5"
+			(at 237.49 46.3549 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x02_Socket"
+			(at 237.49 48.8949 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
+			(at 233.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 233.68 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0ecec0c7-1dd9-433e-b3a6-5581add76ef8")
+		)
+		(pin "2"
+			(uuid "ef9c9709-c6c3-4786-9dc7-dffcc70bcafe")
+		)
+		(instances
+			(project "Klask_PCB"
+				(path "/3be7f516-059a-41e8-b3c3-2dfacc710f71"
+					(reference "J5")
 					(unit 1)
 				)
 			)
