@@ -76,6 +76,8 @@ The Arduino Uno R3 digital pins are mapped to the stepper drivers, limit switche
 
 ## Hardware Connection & Assembly
 
+![Conceptual Wiring Diagram](assets/RoboKlask_PCB.drawio.png)
+
 1. **Terminal Blocks Wiring**:
    - **`J5` (12V Input)**: Connect the 12V and GND outputs from the **USB-PD Trigger Module**.
    - **`J1` & `J2`**: Connect to the X-axis stepper motor coils (Phase A to `J1`, Phase B to `J2`).
