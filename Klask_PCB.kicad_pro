@@ -72,14 +72,6 @@
       "diff_pair_dimensions": [],
       "drc_exclusions": [
         [
-          "silk_edge_clearance|145030189|83699811|d6f38aa4-963a-4682-a32c-183d78464382|74e573f7-c527-4ce0-b99a-31b6a2886e80",
-          ""
-        ],
-        [
-          "silk_edge_clearance|147450000|64000000|e7a17122-4808-47c0-bd51-a9d684b6fa2b|74757304-b38c-4cb0-a249-8fc2bdc017be",
-          ""
-        ],
-        [
           "starved_thermal|105160000|35560000|381be446-b45f-4b85-abfa-0822676ab5a1|23bf91cc-7f08-433e-bb72-7a8f1860bce5|B.Cu",
           ""
         ]
@@ -692,7 +684,7 @@
         "uuid": "3be7f516-059a-41e8-b3c3-2dfacc710f71"
       }
     ],
-    "used_designators": "U1,A1-5,D1,#PWR1-16,C1-5,J1-6,R1-4,SW1-2",
+    "used_designators": "U1,A1-5,D1,C1-5,#PWR1-16,J1-6,R1-4,SW1-2",
     "variants": []
   },
   "sheets": [
