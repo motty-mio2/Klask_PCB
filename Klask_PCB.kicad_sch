@@ -2895,10 +2895,6 @@
 		(uuid "ed4c6669-491b-448a-9009-5227254177d9")
 	)
 	(no_connect
-		(at 157.48 58.42)
-		(uuid "36bf7a0a-df1b-4729-90f4-3dd3813b2a48")
-	)
-	(no_connect
 		(at 157.48 109.22)
 		(uuid "47e2a395-c7ec-46cf-aaa3-25c2346cafdc")
 	)
@@ -2911,12 +2907,16 @@
 		(uuid "6e530d82-3895-4690-8c04-478236021b75")
 	)
 	(no_connect
+		(at 157.48 55.88)
+		(uuid "a432fde1-87c3-4b66-a70b-9a802b90858d")
+	)
+	(no_connect
 		(at 71.12 66.04)
 		(uuid "ad2431ba-29ab-4562-b6ef-4414a0790b41")
 	)
 	(no_connect
-		(at 157.48 105.41)
-		(uuid "eb64a577-c5bf-48b3-ac9c-956879079e81")
+		(at 157.48 102.87)
+		(uuid "d652636b-60cd-4d48-9fde-ed97384154f9")
 	)
 	(wire
 		(pts
@@ -2980,6 +2980,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 55.88) (xy 158.75 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a0e4993-a828-4b9f-9d26-5e13e5f46efb")
+	)
+	(wire
+		(pts
 			(xy 156.21 66.04) (xy 158.75 66.04)
 		)
 		(stroke
@@ -3040,16 +3050,6 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 102.87) (xy 158.75 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d55b8cf-adab-40dd-99eb-1d1bbdeaa75f")
-	)
-	(wire
-		(pts
 			(xy 88.9 107.95) (xy 86.36 107.95)
 		)
 		(stroke
@@ -3087,6 +3087,16 @@
 			(type default)
 		)
 		(uuid "262b75e3-ebf9-4dc2-b09b-fb1cc2593553")
+	)
+	(wire
+		(pts
+			(xy 147.32 58.42) (xy 158.75 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c320edc-05c6-4187-9dc3-47bd40cd972c")
 	)
 	(wire
 		(pts
@@ -3147,16 +3157,6 @@
 			(type default)
 		)
 		(uuid "40962431-0af4-4d36-b09d-17c0cfed1106")
-	)
-	(wire
-		(pts
-			(xy 157.48 58.42) (xy 158.75 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "41c8865d-78fc-41a9-844e-0357ba2fedf0")
 	)
 	(wire
 		(pts
@@ -3230,16 +3230,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 55.88) (xy 158.75 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6310f917-60c5-4a97-804a-ff643ae9df71")
-	)
-	(wire
-		(pts
 			(xy 180.34 68.58) (xy 179.07 68.58)
 		)
 		(stroke
@@ -3297,6 +3287,16 @@
 			(type default)
 		)
 		(uuid "857893bc-9a86-41e4-879b-0008cd1c31e5")
+	)
+	(wire
+		(pts
+			(xy 157.48 102.87) (xy 158.75 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e2bb5cb-2cbf-49bc-b41d-a59c25317fab")
 	)
 	(wire
 		(pts
@@ -3477,16 +3477,6 @@
 			(type default)
 		)
 		(uuid "b25e6c87-c83e-4f19-8d59-6d80f2bafecb")
-	)
-	(wire
-		(pts
-			(xy 157.48 105.41) (xy 158.75 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b3540585-41aa-42ef-ad82-9de2ebaf09f3")
 	)
 	(wire
 		(pts
@@ -3790,6 +3780,16 @@
 	)
 	(wire
 		(pts
+			(xy 149.86 105.41) (xy 158.75 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f59c4cd9-c7c1-43fd-8edd-442e81f0f6b7")
+	)
+	(wire
+		(pts
 			(xy 58.42 143.51) (xy 60.96 143.51)
 		)
 		(stroke
@@ -3817,16 +3817,6 @@
 			(justify right bottom)
 		)
 		(uuid "03ff92be-31a4-4f0d-851c-bc5cf87e0444")
-	)
-	(label "TMC_PDN"
-		(at 149.86 102.87 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0a0b84d1-3d75-4868-8106-187f9375b88c")
 	)
 	(label "MY_A1"
 		(at 116.84 154.94 180)
@@ -3917,16 +3907,6 @@
 			(justify right bottom)
 		)
 		(uuid "461ad744-2135-4e34-a0f6-2c7724f39402")
-	)
-	(label "TMC_PDN"
-		(at 147.32 55.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "49a5cb73-e5a2-4d23-9a34-e5fce62c818d")
 	)
 	(label "MY_STEP"
 		(at 69.85 78.74 180)
@@ -4138,6 +4118,16 @@
 		)
 		(uuid "be961644-70b4-4d5b-bde9-ec23f103a4cc")
 	)
+	(label "TMC_PDN"
+		(at 147.32 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c0715962-2420-4091-90d5-7cf08b7467ea")
+	)
 	(label "MX_DIR"
 		(at 69.85 88.9 180)
 		(effects
@@ -4157,6 +4147,16 @@
 			(justify left bottom)
 		)
 		(uuid "c4f568f7-8f9f-4bc9-8f1e-91e7923cb326")
+	)
+	(label "TMC_PDN"
+		(at 149.86 105.41 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c8e354cd-50dd-4ca2-94d8-aa03891dcacf")
 	)
 	(label "MY_DIR"
 		(at 69.85 81.28 180)
